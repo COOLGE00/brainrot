@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👹 SIGMA Skibidi Hauk Tuah Minor Tracker 3000 👹</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ffff00);
+            animation: bgshift 2s infinite alternate;
+            color: #fff;
+            overflow: hidden;
+            height: 100vh;
+            transform: rotate(5deg);
+        }
+        h1 {
+            font-size: 5rem;
+            color: #ff69b4;
+            text-shadow: 0 0 15px #ff69b4, 0 0 25px #ff69b4, 0 0 35px #ff69b4;
+            animation: textglitch 0.1s infinite alternate;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 2rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: pulse 2s infinite ease-in-out;
+        }
+        input, button {
+            background-color: #ff1493;
+            border: 3px solid #ffff00;
+            padding: 20px;
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin: 10px;
+            color: black;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 20, 147, 0.7), 0 0 50px rgba(255, 20, 147, 0.5);
+            animation: pulse 1.5s infinite;
+        }
+        button:hover {
+            background-color: #0000ff;
+            color: #ffff00;
+            box-shadow: 0 0 70px rgba(0, 0, 255, 1);
+        }
+        .result {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 0 0 25px rgba(255, 0, 255, 0.9), 0 0 50px rgba(255, 0, 255, 0.7);
+            color: #00ff00;
+            animation: glitch 1s infinite alternate;
+            margin-top: 50px;
+        }
+        .randomShapes {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 0, 255, 0.5);
+            animation: randomShape 2s infinite;
+        }
+
+        /* Dorito animation */
+        .dorito {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Doritos_Logo.svg/1024px-Doritos_Logo.svg.png'); /* Dorito Image */
+            background-size: contain;
+            animation: flyAround 5s infinite linear;
+        }
+
+        @keyframes randomShape {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(80%, 30%) rotate(90deg); }
+            50% { transform: translate(-50%, -60%) rotate(180deg); }
+            75% { transform: translate(30%, 70%) rotate(270deg); }
+            100% { transform: translate(60%, -20%) rotate(360deg); }
+        }
+
+        @keyframes flyAround {
+            0% { top: 20%; left: 20%; }
+            25% { top: 50%; left: 50%; }
+            50% { top: 70%; left: 80%; }
+            75% { top: 30%; left: 90%; }
+            100% { top: 10%; left: 10%; }
+        }
+
+        @keyframes bgshift {
+            0% { background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ffff00); }
+            100% { background: linear-gradient(45deg, #ffff00, #ff0000, #00ff00, #0000ff); }
+        }
+        @keyframes textglitch {
+            0% { text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4; }
+            50% { text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4, 0 0 60px #ff69b4; }
+            100% { text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        @keyframes glitch {
+            0% { opacity: 1; transform: translate(0, 0); }
+            25% { opacity: 0.5; transform: translate(-10px, 0); }
+            50% { opacity: 0.3; transform: translate(10px, 0); }
+            75% { opacity: 0.7; transform: translate(0, 10px); }
+            100% { opacity: 1; transform: translate(-10px, -10px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>👹 SIGMA Skibidi Hauk Tuah Minor Tracker 3000 👹</h1>
+    <p>Feel the BRAINROT, feel the ENERGY</p>
+    <input type="date" id="dateInput">
+    <button onclick="trackSigma()">EMBRACE SIGMA</button>
+    <div class="result" id="result">Your SIGMA energy awaits...</div>
+
+    <div id="randomShapes"></div>
+
+    <audio id="weirdMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Start playing strange background music
+        document.getElementById('weirdMusic').play();
+
+        // Glitchy Sigma Event Tracker Logic
+        function trackSigma() {
+            const dateInput = document.getElementById("dateInput").value;
+            const resultDiv = document.getElementById("result");
+
+            if (dateInput) {
+                const sigmaEventCount = Math.floor(Math.random() * 1000000) + 1;
+                resultDiv.textContent = `On ${dateInput}, SIGMA Skibidi Hauk Tuah Minor events: ${sigmaEventCount.toLocaleString()} 👹`;
+            } else {
+                resultDiv.textContent = "SELECT A DATE, and feel the SIGMA BRAINROT!";
+            }
+
+            // Random floating weird shapes
+            const shapeDiv = document.getElementById('randomShapes');
+            const randomShape = document.createElement('div');
+            randomShape.classList.add('randomShapes');
+            shapeDiv.appendChild(randomShape);
+        }
+
+        // Add a Dorito flying around the screen every 3 seconds
+        setInterval(function() {
+            const doritoDiv = document.createElement('div');
+            doritoDiv.classList.add('dorito');
+            document.body.appendChild(doritoDiv);
+        }, 3000);
+    </script>
+</body>
+</html>
